@@ -1,0 +1,3365 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0926.2154                               -->
+<workbook original-version='18.1' source-build='2018.1.5 (20181.18.0926.2154)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <repository-location id='Mobikedraft' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='mobike_shanghai_sample_processed' inline='true' name='federated.14c2g5510d5pm619nzx0t1158nu2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mobike_shanghai_sample_processed' name='textscan.00acxwd19y74e21a3g3xz0jab5bq'>
+            <connection class='textscan' directory='D:/GitHub/Visualization with Tableau/Mobike Data' filename='mobike_shanghai_sample_processed.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00acxwd19y74e21a3g3xz0jab5bq' name='mobike_shanghai_sample_processed.csv' table='[mobike_shanghai_sample_processed#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='orderid' ordinal='1' />
+            <column datatype='integer' name='bikeid' ordinal='2' />
+            <column datatype='integer' name='userid' ordinal='3' />
+            <column datatype='datetime' name='start_time' ordinal='4' />
+            <column datatype='real' name='start_location_x' ordinal='5' />
+            <column datatype='real' name='start_location_y' ordinal='6' />
+            <column datatype='datetime' name='end_time' ordinal='7' />
+            <column datatype='real' name='end_location_x' ordinal='8' />
+            <column datatype='real' name='end_location_y' ordinal='9' />
+            <column datatype='string' name='track' ordinal='10' />
+            <column datatype='integer' name='spots' ordinal='11' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orderid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orderid]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>orderid</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>userid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[userid]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>userid</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[start_time]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>start_time</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_location_x</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start_location_x]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>start_location_x</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_location_y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start_location_y]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>start_location_y</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[end_time]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>end_time</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_location_x</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end_location_x]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>end_location_x</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_location_y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end_location_y]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>end_location_y</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[track]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>track</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spots</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[spots]</local-name>
+            <parent-name>[mobike_shanghai_sample_processed.csv]</parent-name>
+            <remote-alias>spots</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='每辆车的使用次数' datatype='integer' name='[Calculation_1099722795582705664]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [bikeid]: sum([Number of Records])}' />
+      </column>
+      <column caption='记录数合计' datatype='integer' name='[Calculation_1099722795587137537]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='countd([bikeid])' />
+      </column>
+      <column caption='骑行时长（分钟）' datatype='real' name='[Calculation_1243275033533927424]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([end_time]-[start_time])*24*60' />
+      </column>
+      <column caption='骑行时长小于4h？' datatype='boolean' name='[Calculation_1243275033535107073]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_1243275033533927424]&lt;=240' />
+      </column>
+      <column caption='路径点重复次数' datatype='integer' name='[Calculation_1324902777160638466]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='{fixed [track] :count([track])}' />
+      </column>
+      <column caption='星期几' datatype='string' name='[Calculation_1324902777496510467]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE DAY([start_time]) % 7&#13;&#10;WHEN 1 THEN &apos;星期一&apos;&#13;&#10;WHEN 2 THEN &apos;星期二&apos;&#13;&#10;WHEN 3 THEN &apos;星期三&apos;&#13;&#10;WHEN 4 THEN &apos;星期四&apos;&#13;&#10;WHEN 5 THEN &apos;星期五&apos;&#13;&#10;WHEN 6 THEN &apos;星期六&apos;&#13;&#10;WHEN 0 THEN &apos;星期日&apos;&#13;&#10;END' />
+      </column>
+      <column caption='工作日/周末' datatype='string' name='[Calculation_1355302075180978176]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Calculation_1324902777496510467]&#13;&#10;WHEN &apos;星期六&apos;&#13;&#10;THEN &apos;周末&apos;&#13;&#10;WHEN &apos;星期日&apos;&#13;&#10;THEN &apos;周末&apos;&#13;&#10;ELSE &apos;工作日&apos; &#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='车辆编号' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='终点位置经度' datatype='real' name='[end_location_x]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='终点位置纬度' datatype='real' name='[end_location_y]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='订单结束时间' datatype='datetime' name='[end_time]' role='dimension' type='ordinal' />
+      <column caption='订单号' datatype='integer' name='[orderid]' role='dimension' type='ordinal' />
+      <column caption='路径点数量' datatype='integer' name='[spots]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='起点位置经度' datatype='real' name='[start_location_x]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='起点位置纬度' datatype='real' name='[start_location_y]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+      <column caption='路径' datatype='string' name='[track]' role='dimension' type='nominal' />
+      <column caption='用户编号' datatype='integer' name='[userid]' role='dimension' type='ordinal' />
+      <column aggregation='None' datatype='integer' name='[每个用户的使用次数  (数据桶)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[每辆车的使用次数 (复制)]' peg='0' size='1' />
+      </column>
+      <column caption='每个用户的使用次数 ' datatype='integer' name='[每辆车的使用次数 (复制)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [userid]: sum([Number of Records])}' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[每辆车的使用次数 (数据桶)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Calculation_1099722795582705664]' peg='0' size='1' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[记录数 (数据桶)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Number of Records]' peg='0' size='1' />
+      </column>
+      <column aggregation='None' caption='骑行时长 (数据桶)' datatype='integer' name='[骑行时间 (数据桶)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Calculation_1243275033533927424]' peg='0' size='1' />
+      </column>
+      <column-instance column='[Number of Records]' derivation='Avg' name='[avg:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[end_location_y]' derivation='Avg' name='[avg:end_location_y:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[start_location_y]' derivation='Avg' name='[avg:start_location_y:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[orderid]' derivation='None' name='[none:orderid:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[每个用户的使用次数  (数据桶)]' derivation='None' name='[none:每个用户的使用次数  (数据桶):ok]' pivot='key' type='ordinal' />
+      <column-instance column='[每辆车的使用次数 (数据桶)]' derivation='None' name='[none:每辆车的使用次数 (数据桶):ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[pcto:usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='zh_CN' class='hyper' dbname='C:/Users/MaleBird/Desktop/mobike_shanghai_sample_processed.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/11/2018 05:33:45 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='102361' timestamp-start='2018-11-11 05:33:45.904' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102361</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>orderid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[orderid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>orderid</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102361</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bikeid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bikeid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bikeid</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102361</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>userid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[userid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>userid</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20942</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[start_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_time</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>25307</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_location_x</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start_location_x]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_location_x</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>251</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_location_y</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start_location_y]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_location_y</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>253</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[end_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_time</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>21888</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_location_x</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end_location_x]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_location_x</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>249</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_location_y</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end_location_y]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_location_y</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>245</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>track</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[track]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>track</remote-alias>
+              <ordinal>10</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52298</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LZH_RCN' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>spots</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[spots]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>spots</remote-alias>
+              <ordinal>11</ordinal>
+              <family>mobike_shanghai_sample_processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.508838' measure-ordering='alphabetic' measure-percentage='0.491162' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_y:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:start_location_y:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[pcto:usr:Calculation_1099722795587137537:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:orderid:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>61837</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>136654</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>207780</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>280305</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>286005</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>377627</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>398811</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>472899</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>496663</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>632210</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>742713</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>921773</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1061073</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1188464</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1237986</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1360753</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1502951</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1750949</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>6443</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>13894</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>107122</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>134803</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>150761</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>176594</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>239965</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>338539</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>433847</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>569825</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>694961</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>854685</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1035776</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1201714</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1313906</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1427057</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1667928</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>34563</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>113855</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>148407</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>190838</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>254416</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>368786</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>448449</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>598175</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>647504</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>721595</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>906108</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1042857</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1213983</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1326400</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1455501</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1740532</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>77470</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>158938</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>217258</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>294611</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>402644</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>443740</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>496110</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>650885</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>814450</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>992477</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>1124068</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>1262666</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>1395273</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>1563360</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>66033</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>140235</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>207940</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>259858</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>281374</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>383837</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>474790</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>636365</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>747758</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>893239</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>945988</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1080562</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1242524</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1365557</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1471474</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1530555</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1759143</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>38633</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>118679</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>195307</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>270697</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>376088</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>448506</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>599680</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>721765</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>814198</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>911372</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>1043113</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>1215479</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>1328699</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>1458358</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>1746709</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>105845</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>126977</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>167266</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>227129</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>235150</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>326476</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>430533</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>539659</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>593931</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>676892</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>848966</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1028096</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1172407</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1300707</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1422205</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1661011</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>14579</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>108016</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>177513</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>246105</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>286218</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>344797</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>440914</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>583399</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>606937</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>697814</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>872968</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>995629</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1039163</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1202957</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1314296</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1431724</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1680335</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>102904</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>166998</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>226373</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>269287</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>314698</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>421657</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>534476</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>670525</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>831536</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>981674</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1013448</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1132068</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1288390</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1410636</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1622397</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>52410</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>123629</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>168090</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>197462</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>271506</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>352115</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>376854</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>453636</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>494491</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>601812</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>728863</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>919337</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1011175</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1051799</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1221229</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1329877</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1489235</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>1748577</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>80194</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>159681</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>221210</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>279612</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>296167</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>321219</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>404957</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>482351</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>505834</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>656571</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>815126</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>993027</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>1125670</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>1263380</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>1399297</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>1603330</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>82625</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>164471</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>221564</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>259021</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>297746</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>410832</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>508812</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>658662</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>823388</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>995651</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>1127851</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>1266299</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>1403249</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>1603883</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>103107</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>115612</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>167197</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>231479</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>322230</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>338469</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>429722</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>537572</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>591308</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>674974</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>845286</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1014932</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1142091</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1292099</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1421865</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1655790</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>106762</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>127579</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>172734</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>238389</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>329150</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>341203</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>430562</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>565017</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>634402</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>685965</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>853284</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1029924</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1198970</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1313839</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1424023</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1661194</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>67516</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>144430</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>176884</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>188484</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>215819</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>285473</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>388022</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>486606</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>641879</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>791941</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>971373</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1082589</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1244322</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1387000</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1533911</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1769827</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>59750</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>129296</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>161552</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>199496</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>279623</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>377394</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>386674</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>415137</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>471983</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>610244</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>736316</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>921022</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1023946</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1057245</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1232485</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1335816</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1491720</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1750746</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>24646</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>108442</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>180075</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>248815</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>296394</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>348346</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>445733</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>584392</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>710812</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>856464</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>874457</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1039853</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1212193</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1318364</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1444544</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1722342</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1747872</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>83829</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>109952</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>166979</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>226321</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>314027</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>418585</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>509987</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>564843</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>662683</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>823519</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1000471</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1129468</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1267952</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1408682</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1610650</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>71573</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>157113</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>182120</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>215841</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>285952</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>391002</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>493639</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>528016</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>645282</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>809644</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>981975</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1094494</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1255119</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1387596</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1560820</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1771278</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>32479</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>110106</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>184711</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>253902</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>270234</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>329430</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>356837</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>446234</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>596823</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>713056</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>883181</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1041513</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1213811</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1322146</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1450957</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1723631</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:每辆车的使用次数 (数据桶):ok]' palette='orange_gold_10_0' type='palette'>
+            <map to='#9e3a26'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b34223'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#c84b22'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#da5821'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#e7681d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#f17b23'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f49135'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f7a648'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f8bb5a'>
+              <bucket>9</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:每个用户的使用次数  (数据桶):ok]' palette='orange_10_0' type='palette'>
+            <map to='#9e3d22'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#a54122'>
+              <bucket>23</bucket>
+            </map>
+            <map to='#ad4522'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#b54923'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#bc4d23'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#c45122'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#cb5522'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#d35921'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#da5e20'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#e26320'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#e76920'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#ed6f20'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#ef7724'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f18029'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#f3882e'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#f49133'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f59a3a'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f5a242'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f5aa4c'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#f8b15b'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#fab869'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#fcbf77'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#ffc685'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='8月1日（周一）用车地点'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column-instance column='[end_location_x]' derivation='Avg' name='[avg:end_location_x:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end_location_y]' derivation='Avg' name='[avg:end_location_y:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='终点位置经度' datatype='real' name='[end_location_x]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column aggregation='Avg' caption='终点位置纬度' datatype='real' name='[end_location_y]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Day-Trunc' name='[tdy:start_time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]' included-values='in-range'>
+            <min>#2016-08-01 00:00:00#</min>
+            <max>#2016-08-01 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_x:qk]' field-type='quantitative' max='13568783.092656355' min='13486373.87249562' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_y:qk]' field-type='quantitative' max='3685540.1775324214' min='3643659.6419314919' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_y:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_x:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='8月30日（周一）用车地点 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column-instance column='[end_location_x]' derivation='Avg' name='[avg:end_location_x:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end_location_y]' derivation='Avg' name='[avg:end_location_y:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='终点位置经度' datatype='real' name='[end_location_x]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column aggregation='Avg' caption='终点位置纬度' datatype='real' name='[end_location_y]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Day-Trunc' name='[tdy:start_time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]' included-values='in-range'>
+            <min>#2016-08-30 00:00:00#</min>
+            <max>#2016-08-30 12:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_x:qk]' field-type='quantitative' max='13579063.030562283' min='13484313.299500575' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_y:qk]' field-type='quantitative' max='3688000.7036413141' min='3636377.5485383994' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_y:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[avg:end_location_x:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='8月订单数量'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_time]' derivation='Day-Trunc' name='[tdy:start_time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</cols>
+        <show-full-range>
+          <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[bikeid (数据桶)]</column>
+        </show-full-range>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</field>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1827</value>
+                <value>#2016-08-01 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</field>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5384</value>
+                <value>#2016-08-31 00:00:00#</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='星期几订单多？'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>周五、周六、周日的订单数高于其他工作日。</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='星期几' datatype='string' name='[Calculation_1324902777496510467]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE DAY([start_time]) % 7&#13;&#10;WHEN 1 THEN &apos;星期一&apos;&#13;&#10;WHEN 2 THEN &apos;星期二&apos;&#13;&#10;WHEN 3 THEN &apos;星期三&apos;&#13;&#10;WHEN 4 THEN &apos;星期四&apos;&#13;&#10;WHEN 5 THEN &apos;星期五&apos;&#13;&#10;WHEN 6 THEN &apos;星期六&apos;&#13;&#10;WHEN 0 THEN &apos;星期日&apos;&#13;&#10;END' />
+            </column>
+            <column caption='工作日/周末' datatype='string' name='[Calculation_1355302075180978176]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Calculation_1324902777496510467]&#13;&#10;WHEN &apos;星期六&apos;&#13;&#10;THEN &apos;周末&apos;&#13;&#10;WHEN &apos;星期日&apos;&#13;&#10;THEN &apos;周末&apos;&#13;&#10;ELSE &apos;工作日&apos; &#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[start_time]' derivation='Day' name='[dy:start_time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1324902777496510467]' derivation='None' name='[none:Calculation_1324902777496510467:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1355302075180978176]' derivation='None' name='[none:Calculation_1355302075180978176:nk]' pivot='key' type='nominal' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[dy:start_time:ok]'>
+            <groupfilter from='1' function='range' level='[dy:start_time:ok]' to='28' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;星期一&quot;</bucket>
+              <bucket>&quot;星期二&quot;</bucket>
+              <bucket>&quot;星期三&quot;</bucket>
+              <bucket>&quot;星期四&quot;</bucket>
+              <bucket>&quot;星期五&quot;</bucket>
+              <bucket>&quot;星期六&quot;</bucket>
+              <bucket>&quot;星期日&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[dy:start_time:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1355302075180978176:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='每个用户的使用次数散点图'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>Sheet Name</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='记录数合计' datatype='integer' name='[Calculation_1099722795587137537]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd([bikeid])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='车辆编号' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Day' name='[dy:start_time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[每个用户的使用次数  (数据桶)]' derivation='None' name='[none:每个用户的使用次数  (数据桶):ok]' pivot='key' type='ordinal' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column caption='用户编号' datatype='integer' name='[userid]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' datatype='integer' name='[每个用户的使用次数  (数据桶)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[每辆车的使用次数 (复制)]' peg='0' size='1' />
+            </column>
+            <column caption='每个用户的使用次数 ' datatype='integer' name='[每辆车的使用次数 (复制)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [userid]: sum([Number of Records])}' />
+            </column>
+          </datasource-dependencies>
+          <natural-sort column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]' />
+              <size column='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7471270561218262' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[dy:start_time:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='每个用户的使用次数直方图'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>每个用户骑行次数绝大部分分布在1-9次之间。</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[每辆车的使用次数 (复制)]' derivation='Count' name='[cnt:每辆车的使用次数 (复制):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[每个用户的使用次数  (数据桶)]' derivation='None' name='[none:每个用户的使用次数  (数据桶):qk]' pivot='key' type='quantitative' />
+            <column caption='用户编号' datatype='integer' name='[userid]' role='dimension' type='ordinal' />
+            <column aggregation='None' datatype='integer' name='[每个用户的使用次数  (数据桶)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[每辆车的使用次数 (复制)]' peg='0' size='1' />
+            </column>
+            <column caption='每个用户的使用次数 ' datatype='integer' name='[每辆车的使用次数 (复制)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [userid]: sum([Number of Records])}' />
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):qk]' palette='orange_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[cnt:每辆车的使用次数 (复制):qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):qk]</cols>
+        <show-full-range>
+          <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[每个用户的使用次数  (数据桶)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='每辆车的使用次数散点图'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='每辆车的使用次数' datatype='integer' name='[Calculation_1099722795582705664]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [bikeid]: sum([Number of Records])}' />
+            </column>
+            <column caption='记录数合计' datatype='integer' name='[Calculation_1099722795587137537]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd([bikeid])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='车辆编号' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Day' name='[dy:start_time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[每辆车的使用次数 (数据桶)]' derivation='None' name='[none:每辆车的使用次数 (数据桶):ok]' pivot='key' type='ordinal' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' datatype='integer' name='[每辆车的使用次数 (数据桶)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[Calculation_1099722795582705664]' peg='0' size='1' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]'>
+            <groupfilter function='level-members' level='[none:每辆车的使用次数 (数据桶):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <natural-sort column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]' direction='DESC' />
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]' />
+              <size column='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7471270561218262' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[dy:start_time:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='每辆车的使用次数直方图'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='每辆车的使用次数' datatype='integer' name='[Calculation_1099722795582705664]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [bikeid]: sum([Number of Records])}' />
+            </column>
+            <column caption='记录数合计' datatype='integer' name='[Calculation_1099722795587137537]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd([bikeid])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='车辆编号' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[每辆车的使用次数 (数据桶)]' derivation='None' name='[none:每辆车的使用次数 (数据桶):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[pcto:usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_1099722795587137537]' derivation='User' name='[usr:Calculation_1099722795587137537:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' datatype='integer' name='[每辆车的使用次数 (数据桶)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[Calculation_1099722795582705664]' peg='0' size='1' />
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' />
+              <text column='[federated.14c2g5510d5pm619nzx0t1158nu2].[pcto:usr:Calculation_1099722795587137537:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</cols>
+        <show-full-range>
+          <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[每辆车的使用次数 (数据桶)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='骑行时长散点图'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>随着摩拜单车的推广，单词骑行时间有所增长。</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='骑行时长（分钟）' datatype='real' name='[Calculation_1243275033533927424]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([end_time]-[start_time])*24*60' />
+            </column>
+            <column caption='骑行时长小于4h？' datatype='boolean' name='[Calculation_1243275033535107073]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1243275033533927424]&lt;=240' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='订单结束时间' datatype='datetime' name='[end_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1243275033533927424]' derivation='None' name='[none:Calculation_1243275033533927424:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1243275033535107073]' derivation='None' name='[none:Calculation_1243275033535107073:nk]' pivot='key' type='nominal' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_time]' derivation='Day-Trunc' name='[tdy:start_time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1243275033535107073:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' palette='orange_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.6591712236404419' />
+                <format attr='mark-transparency' value='83' />
+                <format attr='has-stroke' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033533927424:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[tdy:start_time:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='骑行时长直方图'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>骑行时长主要集中在4-14分钟，主要为短途使用。</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='骑行时长（分钟）' datatype='real' name='[Calculation_1243275033533927424]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([end_time]-[start_time])*24*60' />
+            </column>
+            <column caption='骑行时长小于4h？' datatype='boolean' name='[Calculation_1243275033535107073]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1243275033533927424]&lt;=240' />
+            </column>
+            <column-instance column='[Calculation_1243275033533927424]' derivation='Count' name='[cnt:Calculation_1243275033533927424:qk]' pivot='key' type='quantitative' />
+            <column caption='订单结束时间' datatype='datetime' name='[end_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1243275033535107073]' derivation='None' name='[none:Calculation_1243275033535107073:nk]' pivot='key' type='nominal' />
+            <column-instance column='[骑行时间 (数据桶)]' derivation='None' name='[none:骑行时间 (数据桶):qk]' pivot='key' type='quantitative' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column aggregation='None' caption='骑行时长 (数据桶)' datatype='integer' name='[骑行时间 (数据桶)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[Calculation_1243275033533927424]' peg='0' size='1' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1243275033535107073:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:骑行时间 (数据桶):qk]' field-type='quantitative' max='120.0' min='1.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[cnt:Calculation_1243275033533927424:qk]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:骑行时间 (数据桶):qk]</cols>
+        <show-full-range>
+          <column>[federated.14c2g5510d5pm619nzx0t1158nu2].[骑行时间 (数据桶)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='骑行时间'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>工作日的高峰使用段为7-8时和17-19时，周末使用时段比较平均，下午的使用量更高。</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+            <column caption='星期几' datatype='string' name='[Calculation_1324902777496510467]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE DAY([start_time]) % 7&#13;&#10;WHEN 1 THEN &apos;星期一&apos;&#13;&#10;WHEN 2 THEN &apos;星期二&apos;&#13;&#10;WHEN 3 THEN &apos;星期三&apos;&#13;&#10;WHEN 4 THEN &apos;星期四&apos;&#13;&#10;WHEN 5 THEN &apos;星期五&apos;&#13;&#10;WHEN 6 THEN &apos;星期六&apos;&#13;&#10;WHEN 0 THEN &apos;星期日&apos;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[start_time]' derivation='Hour' name='[hr:start_time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1324902777496510467]' derivation='None' name='[none:Calculation_1324902777496510467:nk]' pivot='key' type='nominal' />
+            <column caption='订单起始时间' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;星期一&quot;</bucket>
+              <bucket>&quot;星期二&quot;</bucket>
+              <bucket>&quot;星期三&quot;</bucket>
+              <bucket>&quot;星期四&quot;</bucket>
+              <bucket>&quot;星期五&quot;</bucket>
+              <bucket>&quot;星期六&quot;</bucket>
+              <bucket>&quot;星期日&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e2da</color>
+                <color>#f3d3c3</color>
+                <color>#f5c4ab</color>
+                <color>#f6b493</color>
+                <color>#f8a57c</color>
+                <color>#f99563</color>
+                <color>#fa854b</color>
+                <color>#fc7532</color>
+                <color>#fd6519</color>
+                <color>#ff5500</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14c2g5510d5pm619nzx0t1158nu2].[hr:start_time:ok]</rows>
+        <cols>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='2016年8月摩拜单车上海用量分析' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='5' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='摩拜单车于 2016 年 4 月 在上海正式运行，当年8月末的订单量约为8月初的3倍，扩张迅速。' captured-sheet='订单数量' id='1' />
+                  <story-point caption='8月末单车覆盖面积和使用量明显高于8月初。' captured-sheet='骑行地点' id='2' />
+                  <story-point caption='骑行时长主要小于15分钟，短途骑行为主。' captured-sheet='骑行时长' id='3' />
+                  <story-point caption='79%的单车的使用率只有1次，不足6%的单车至少被使用3次。' captured-sheet='单车使用次数' id='4'>
+                    <capturedDeltas>
+                      <worksheet name='每辆车的使用次数直方图'>
+                        <selection-collection />
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='每个用户骑行次数绝大部分分布在1-9次之间，最多的次数为5次，证明已经养成了一定的用户习惯。' captured-sheet='用户使用次数' id='5' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='单车使用次数'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='6' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='4' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='1' name='每辆车的使用次数直方图' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='3' name='每辆车的使用次数散点图' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='5' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='28250' id='7' name='每辆车的使用次数散点图' pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='15750' id='8' name='每辆车的使用次数散点图' pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' type='size' w='16000' x='83200' y='29250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='用户使用次数'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='6' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='4' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='1' name='每个用户的使用次数直方图' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='3' name='每个用户的使用次数散点图' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='5' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='60750' id='7' name='每个用户的使用次数散点图' pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13250' id='8' name='每个用户的使用次数散点图' pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' type='size' w='16000' x='83200' y='61750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='订单数量'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='10' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='3' type='layout-basic' w='98400' x='800' y='1000'>
+                <zone h='26749' id='1' name='8月订单数量' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='71251' id='7' name='星期几订单多？' w='44299' x='800' y='27749'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='71251' id='8' name='骑行时间' w='54101' x='45099' y='27749'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='骑行地点'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='98000' id='1' name='8月1日（周一）用车地点' w='49200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98000' id='7' name='8月30日（周一）用车地点 ' w='49200' x='50000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='骑行时长'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='mobike_shanghai_sample_processed' name='federated.14c2g5510d5pm619nzx0t1158nu2' />
+      </datasources>
+      <datasource-dependencies datasource='federated.14c2g5510d5pm619nzx0t1158nu2'>
+        <column caption='骑行时长小于4h？' datatype='boolean' name='[Calculation_1243275033535107073]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='[Calculation_1243275033533927424]&lt;=240' />
+        </column>
+        <column-instance column='[Calculation_1243275033535107073]' derivation='None' name='[none:Calculation_1243275033535107073:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='63750' id='1' name='骑行时长散点图' w='82400' x='800' y='35250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='34250' id='8' name='骑行时长直方图' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='13500' id='6' name='骑行时长散点图' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]' type='filter' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='7' name='骑行时长散点图' pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' type='color' w='16000' x='83200' y='14500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='2016年8月摩拜单车上海用量分析'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='8月1日（周一）用车地点'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:start_time:qk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:track:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='8月30日（周一）用车地点 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:start_time:qk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:track:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='8月订单数量'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:bikeid:ok]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Calculation_1324902777160638466:ok]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tyr:start_time:qk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[yr:start_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' hidden='true' name='单车使用次数'>
+      <viewpoints>
+        <viewpoint name='每辆车的使用次数散点图'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='每辆车的使用次数直方图'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</field>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[pcto:usr:Calculation_1099722795587137537:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>1</value>
+                  <value>62155</value>
+                  <value>0.7861551693607548</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='星期几订单多？'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1355302075180978176:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[dy:start_time:ok]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1355302075180978176:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='每个用户的使用次数散点图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]' type='color' />
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[yr:start_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='每个用户的使用次数直方图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='每辆车的使用次数散点图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]' type='color' />
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[yr:start_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='每辆车的使用次数直方图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每辆车的使用次数 (数据桶):ok]</field>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[usr:Calculation_1099722795587137537:qk]</field>
+                  <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[pcto:usr:Calculation_1099722795587137537:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4</value>
+                <value>862</value>
+                <value>0.010902835749158887</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[yr:start_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' hidden='true' name='用户使用次数'>
+      <viewpoints>
+        <viewpoint name='每个用户的使用次数散点图'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:每个用户的使用次数  (数据桶):ok]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='每个用户的使用次数直方图'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' hidden='true' name='订单数量'>
+      <viewpoints>
+        <viewpoint name='8月订单数量'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='星期几订单多？'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='骑行时间' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' hidden='true' name='骑行地点'>
+      <viewpoints>
+        <viewpoint name='8月1日（周一）用车地点'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='8月30日（周一）用车地点 '>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' hidden='true' name='骑行时长'>
+      <viewpoints>
+        <viewpoint name='骑行时长散点图'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='骑行时长直方图'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='骑行时长散点图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tyr:start_time:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='骑行时长直方图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033533927424:qk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1243275033535107073:nk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[tyr:start_time:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='骑行时间'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14c2g5510d5pm619nzx0t1158nu2].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1324902777496510467:nk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[none:Calculation_1355302075180978176:nk]</field>
+            <field>[federated.14c2g5510d5pm619nzx0t1158nu2].[yr:start_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='2016年8月摩拜单车上海用量分析' width='192'>
+      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
+      Yz4AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
