@@ -1,4 +1,8 @@
-﻿Area:
+﻿1.数据去重：删除分别与Offals、Miscellaneous和Nuts and products重复的Offals, Edible、Infant food和Treenuts
+2.Production列中某些item的数据其实是小计数(Subtotal)，根据FAO官网的Definition和European Nutrition and Health Report 2004, 第58卷, 第2页，Table 1. List of commodities by major food groups（https://books.google.com.hk/books?id=xZe_GKA4fywC&pg=PR18&lpg=PR18&dq=Coconuts+-+Incl+Copra+fao&source=bl&ots=R1NKwdqd35&sig=ACfU3U2d9egkbYwm4yhkzcBk2FnE7wnxFQ&hl=zh-CN&sa=X&ved=2ahUKEwiTupTfs5PkAhWTBIgKHbC5BFEQ6AEwDXoECAYQAQ#v=onepage&q&f=false）对Item进行分组。
+
+
+Area:
 科特迪瓦的英文无法识别，需要手动匹配地理信息
 中国合并? 有经纬度似乎不用合并了
 
